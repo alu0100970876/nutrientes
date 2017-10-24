@@ -23,6 +23,9 @@ RSpec.describe Nutrientes do
 			expect(@ejemplo.proteinas).to eq(10)
 		end
 
+		it "Se almacena correctamente la cantidad de glúcidos en grmaos" do
+			exoect(@ejemplo.glucidos).to eq(5)
+		end
   	end
   end
 end
