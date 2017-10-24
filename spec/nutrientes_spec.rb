@@ -18,6 +18,11 @@ RSpec.describe Nutrientes do
     		it "Se almacena correctamente el nombre" do
       			expect(@ejemplo.nombre).to eq("Ejemplo") 
     		end
+
+		it "Se almacena correctamente la cantidad de proteinas en gramos" do
+			expect(@ejemplo.proteinas).to eq(10)
+		end
+
   	end
   end
 end
