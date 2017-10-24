@@ -31,5 +31,12 @@ RSpec.describe Nutrientes do
    		     expect(@ejemplo.lipidos).to eq(1)
 		end
   	end
+
+	describe "#Metodos para obtener info formateada" do
+		it "Metodo para obtener un alimento formateado" do
+			expect(@ejemplo.to_s).to eq("Nombre: Ejemplo, Proteinas: 10gr, Glúcidos: 5gr, Lipidos: 1gr")
+		end
+	end
+
   end
 end
