@@ -12,4 +12,8 @@ class Alimento
 	def to_s()
 		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr"
 	end
+
+	def v_energetico()
+		return (@proteinas * 4 + @glucidos * 4 + @lipidos * 9)
+	end
 end
