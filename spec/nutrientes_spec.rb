@@ -10,5 +10,14 @@ RSpec.describe Nutrientes do
   end
 
   describe Alimento do
+	before :each do
+    		@ejemplo = Alimento.new("Ejemplo", 10, 5, 1)
+  	end 
+
+	describe "#Se almacenan los datos" do
+    		it "Se almacena correctamente el nombre" do
+      			expect(@ejemplo.nombre).to eq("Ejemplo") 
+    		end
+  	end
   end
 end
