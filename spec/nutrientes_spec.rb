@@ -8,4 +8,7 @@ RSpec.describe Nutrientes do
   it "does something useful" do
     expect(false).to eq(false)
   end
+
+  describe Alimento do
+  end
 end
