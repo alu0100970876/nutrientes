@@ -24,7 +24,7 @@ RSpec.describe Nutrientes do
 		end
 
 		it "Se almacena correctamente la cantidad de glúcidos en grmaos" do
-			exoect(@ejemplo.glucidos).to eq(5)
+			expect(@ejemplo.glucidos).to eq(5)
 		end
   	end
   end
