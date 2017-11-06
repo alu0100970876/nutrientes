@@ -5,10 +5,6 @@ RSpec.describe Nutrientes do
     expect(Nutrientes::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(false)
-  end
-
   describe Alimento do
 	before :each do
     		@ejemplo = Alimento.new("Ejemplo", 10, 5, 1)
@@ -46,6 +42,8 @@ RSpec.describe Nutrientes do
 			expect(@ejemplo.v_energetico).to eq(69)
 		end
 	end
-
+  end
+  
+  describe Lista_alim do
   end
 end
