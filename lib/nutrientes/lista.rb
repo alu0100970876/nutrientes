@@ -25,16 +25,10 @@ class Lista
        return dummy
     end
     
-    #def extraer_fin
-    #    sig = @Head.next_
-    #    prev = nil
-    #    while (sig != nil)
-    #        prev = sig
-    #        sig = sig.next_
-    #    end
-    #    dummy = sig.value
-    #    sig = sig.prev
-    #    sig.next_ =  nil
-    #    return dummy
-    #end
+    def extraer_cola
+       dummy = @tail.value 
+       @tail = @tail.prev
+       return dummy
+    end
+    
 end
