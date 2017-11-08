@@ -27,3 +27,13 @@ class HLH < Alimento
 		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Huevos, lácteos y helados"
 	end
 end
+
+class CarnesyDerivados < Alimento
+	def initialize(nombre, p, g, l)
+		super(nombre, p, g, l)
+	end
+	
+	def to_s
+		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Carnes y derivados"
+	end
+end

@@ -106,4 +106,29 @@ RSpec.describe Nutrientes do
   		end
   	end
   end
+  
+  describe CarnesyDerivados do
+  	before :each do
+  		  @Cerdo = CarnesyDerivados.new("Cerdo", 21.5, 0.0, 6.3)
+  		  @Ternera = CarnesyDerivados.new("Ternera", 21.1, 0.0, 3.1)
+  		  @Pollo = CarnesyDerivados.new("Pollo", 20.6, 0.0, 5.6)
+  	end 
+  	context "Pruebas para Carnes y derivados"do
+  		it"Cerdo"do
+  			expect(@Cerdo.class).to eq(CarnesyDerivados)
+  			expect(@Cerdo.class.superclass).to eq(Alimento)
+  			expect(@Cerdo.instance_of? CarnesyDerivados).to eq(true)
+  		end
+  		it"Ternera"do
+  			expect(@Ternera.class).to eq(CarnesyDerivados)
+  			expect(@Ternera.class.superclass).to eq(Alimento)
+  			expect(@Ternera.instance_of? CarnesyDerivados).to eq(true)
+  		end
+  		it"Pollo"do
+  			expect(@Pollo.class).to eq(CarnesyDerivados)
+  			expect(@Pollo.class.superclass).to eq(Alimento)
+  			expect(@Pollo.instance_of? CarnesyDerivados).to eq(true)
+  		end
+  	end
+  end
 end
