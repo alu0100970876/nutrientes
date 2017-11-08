@@ -52,7 +52,8 @@ RSpec.describe Nutrientes do
   	end 
   	describe "#Métodos de la lista" do
   		it"Insertar nodo" do
-  		  
+  			nuevo = Alimento.new("Ejemplo2",11,6,2)
+  		  expect(@ejemplo.insertar_nodo(nuevo)).to eq(nuevo)
   	  end
     end
   end
