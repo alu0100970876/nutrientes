@@ -1,15 +1,16 @@
 
 Node = Struct.new(:value, :next_, :prev)
 
-class Lista_alim
-    attr_reader :Node
+class Lista
+    attr_reader :head, :tail
     
     def initialize(val)
-        @Head = Node.new(val, nil, nil)
+        @head, @tail = Node.new(val, nil, nil)
     end
     
-    def insertar_nodo(val)
-        sig = @Head
+    def insertar_nodo_cola(val)
+        aux = Node.new(val,nil,@tail)
+        @tail 
         prev = nil
         while (sig != nil)
             prev = sig

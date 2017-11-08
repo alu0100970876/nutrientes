@@ -44,16 +44,32 @@ RSpec.describe Nutrientes do
 	end
   end
   
-  describe Lista_alim do
+  describe Lista do
   	
   	before :each do
+  		  @value = 1
   			@alim = Alimento.new("Ejemplo", 10, 5, 1)
-    		@ejemplo = Lista_alim.new(@alim)
+    		@en = Lista.new(@value)
+    		@ejemplo = Lista.new(@alim)
   	end 
-  	describe "#Métodos de la lista" do
-  		it"Insertar nodo" do
-  			nuevo = Alimento.new("Ejemplo2",11,6,2)
-  		  expect(@ejemplo.insertar_nodo(nuevo)).to eq(nuevo)
+  	context "Pruebas de la creación de listas" do
+  		it "Se ha creado bien la lista" do
+  			expect(@en).not_to eq(nil)
+  		end
+  		it "devuelve la cabeza" do
+  			expect(@en.head).not_to eq(nil)
+  		end
+  		it "devuelve la cola" do
+  			expect(@en.tail).not_to eq(nil)
+  		end
+  	end
+  	context "#Métodos de la lista" do
+  		it "Insertar nodo" do
+  			#nuevo = Alimento.new("Ejemplo2",11,6,2)
+  		  #expect(@ejemplo.insertar_nodo(nuevo)).to eq(nuevo)
+  		  nuevo = 2
+  		  @en.insertar_nodo(nuevo)
+  		  expect(@en.tail.value).to eq(nuevo)
   	  end
     end
   end
