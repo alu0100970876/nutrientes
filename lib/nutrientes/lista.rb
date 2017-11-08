@@ -24,12 +24,14 @@ class Lista
     def extraer_head
        dummy = @head.value 
        @head = @head.next_
+       @head.prev = nil
        return dummy
     end
     
     def extraer_cola
        dummy = @tail.value 
        @tail = @tail.prev
+       @tail.next_ = nil
        return dummy
     end
     

@@ -17,3 +17,13 @@ class Alimento
 		return (@proteinas * 4 + @glucidos * 4 + @lipidos * 9)
 	end
 end
+
+class HLH < Alimento
+	def initialize(nombre, p, g, l)
+		super(nombre, p, g, l)
+	end
+	
+	def to_s
+		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Huevos, lácteos y helados"
+	end
+end

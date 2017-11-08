@@ -6,46 +6,36 @@ RSpec.describe Nutrientes do
   end
 
   describe Alimento do
-	before :each do
+		before :each do
     		@ejemplo = Alimento.new("Ejemplo", 10, 5, 1)
-  	end 
-
-	describe "#Se almacenan los datos" do
-    		
-		it "Se almacena correctamente el nombre" do
-      			expect(@ejemplo.nombre).to eq("Ejemplo") 
-    		end
-
-		it "Se almacena correctamente la cantidad de proteinas en gramos" do
-			expect(@ejemplo.proteinas).to eq(10)
-		end
-
-		it "Se almacena correctamente la cantidad de glúcidos en grmaos" do
-			expect(@ejemplo.glucidos).to eq(5)
-		end
-
-		it "Se almacena correctamente la cantidad de lipidos en grmaos" do
-   		     expect(@ejemplo.lipidos).to eq(1)
-		end
   	end
-
-	describe "#Metodos para obtener info formateada" do
-		
-		it "Metodo para obtener un alimento formateado" do
-			expect(@ejemplo.to_s).to eq("Nombre: Ejemplo, Proteinas: 10gr, Glúcidos: 5gr, Lipidos: 1gr")
+		describe "#Se almacenan los datos" do
+			it "Se almacena correctamente el nombre" do
+      			expect(@ejemplo.nombre).to eq("Ejemplo") 
+    	end
+			it "Se almacena correctamente la cantidad de proteinas en gramos" do
+				expect(@ejemplo.proteinas).to eq(10)
+			end
+			it "Se almacena correctamente la cantidad de glúcidos en grmaos" do
+				expect(@ejemplo.glucidos).to eq(5)
+			end
+			it "Se almacena correctamente la cantidad de lipidos en grmaos" do
+   		     expect(@ejemplo.lipidos).to eq(1)
+			end
+  	end
+		describe "#Metodos para obtener info formateada" do
+			it "Metodo para obtener un alimento formateado" do
+				expect(@ejemplo.to_s).to eq("Nombre: Ejemplo, Proteinas: 10gr, Glúcidos: 5gr, Lipidos: 1gr")
+			end
 		end
-	end
-
-	describe "#Metodos para obtener el valor energético de un alimento" do
-		
-		it"Metodo que retorna valor energético" do
-			expect(@ejemplo.v_energetico).to eq(69)
+		describe "#Metodos para obtener el valor energético de un alimento" do
+			it"Metodo que retorna valor energético" do
+				expect(@ejemplo.v_energetico).to eq(69)
+			end
 		end
-	end
   end
   
   describe Lista do
-  	
   	before :each do
   		  @value = 1
   			#@alim = Alimento.new("Ejemplo", 10, 5, 1)
@@ -90,5 +80,30 @@ RSpec.describe Nutrientes do
   		  expect(@en.to_s).to eq("(1,2,)")
   	  end
     end
+  end
+  
+  describe HLH do
+  	before :each do
+  		  @huevo_f = HLH.new("Huevo frito", 14.1, 0.0, 10.5)
+  		  @leche = HLH.new("Leche vaca", 3.3, 4.8, 3.2)
+  		  @yogurt = HLH.new("Yogurt", 3.8, 4.9, 3.8)
+  	end 
+  	context "Pruebas para Huevos lacteos y Helados"do
+  		it"Huevo frito"do
+  			expect(@huevo_f.class).to eq(HLH)
+  			expect(@huevo_f.class.superclass).to eq(Alimento)
+  			expect(@huevo_f.instance_of? HLH).to eq(true)
+  		end
+  		it"Leche vaca"do
+  			expect(@leche.class).to eq(HLH)
+  			expect(@leche.class.superclass).to eq(Alimento)
+  			expect(@leche.instance_of? HLH).to eq(true)
+  		end
+  		it"Yogurt"do
+  			expect(@yogurt.class).to eq(HLH)
+  			expect(@yogurt.class.superclass).to eq(Alimento)
+  			expect(@yogurt.instance_of? HLH).to eq(true)
+  		end
+  	end
   end
 end
