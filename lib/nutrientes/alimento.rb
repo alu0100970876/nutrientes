@@ -47,3 +47,23 @@ class Pescadosymariscos < Alimento
 		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: pescados y mariscos"
 	end
 end
+
+class AlimentosGrasos < Alimento
+	def initialize(nombre, p, g, l)
+		super(nombre, p, g, l)
+	end
+	
+	def to_s
+		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Alimentos Grasos"
+	end
+end
+
+class AlimentosRenC < Alimento
+	def initialize(nombre, p, g, l)
+		super(nombre, p, g, l)
+	end
+	
+	def to_s
+		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Alimentos ricos en carbohidratos"
+	end
+end

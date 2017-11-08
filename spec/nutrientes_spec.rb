@@ -157,6 +157,62 @@ RSpec.describe Nutrientes do
   	end
   end
   
+  describe AlimentosGrasos do
+  	before :each do
+  		  @Aceite = AlimentosGrasos.new("Aceite de oliva", 0.0, 0.2, 99.6)
+  		  @Mantequilla = AlimentosGrasos.new("Mantequilla", 0.7, 0.0, 83.2)
+  		  @Chocolate = AlimentosGrasos.new("Chocolate", 5.3, 47.0, 30.0)
+  	end 
+  	context "Pruebas para Alimentos Grasos"do
+  		it"Aceite"do
+  			expect(@Aceite.class).to eq(AlimentosGrasos)
+  			expect(@Aceite.class.superclass).to eq(Alimento)
+  			expect(@Aceite.instance_of? AlimentosGrasos).to eq(true)
+  		end
+  		it"Mantequilla"do
+  			expect(@Mantequilla.class).to eq(AlimentosGrasos)
+  			expect(@Mantequilla.class.superclass).to eq(Alimento)
+  			expect(@Mantequilla.instance_of? AlimentosGrasos).to eq(true)
+  		end
+  		it"Chocolate"do
+  			expect(@Chocolate.class).to eq(AlimentosGrasos)
+  			expect(@Chocolate.class.superclass).to eq(Alimento)
+  			expect(@Chocolate.instance_of? AlimentosGrasos).to eq(true)
+  		end
+  	end
+  end
+  
+  describe AlimentosRenC do
+  	before :each do
+  		  @Azucar = AlimentosRenC.new("Azucar", 0.0, 99.8, 0.0)
+  		  @Arroz = AlimentosRenC.new("Arroz", 6.8, 77.7, 0.6)
+  		  @Lentejas = AlimentosRenC.new("Lentejas", 23.5, 52.0, 1.4)
+  		  @Papas = AlimentosRenC.new("Papas", 2.0, 15.4, 0.1)
+  	end 
+  	context "Pruebas para Alimentos Ricos en carbohidratos"do
+  		it"Azucar"do
+  			expect(@Azucar.class).to eq(AlimentosRenC)
+  			expect(@Azucar.class.superclass).to eq(Alimento)
+  			expect(@Azucar.instance_of? AlimentosRenC).to eq(true)
+  		end
+  		it"Arroz"do
+  			expect(@Arroz.class).to eq(AlimentosRenC)
+  			expect(@Arroz.class.superclass).to eq(Alimento)
+  			expect(@Arroz.instance_of? AlimentosRenC).to eq(true)
+  		end
+  		it"Lentejas"do
+  			expect(@Lentejas.class).to eq(AlimentosRenC)
+  			expect(@Lentejas.class.superclass).to eq(Alimento)
+  			expect(@Lentejas.instance_of? AlimentosRenC).to eq(true)
+  		end
+  		it"Papas"do
+  			expect(@Papas.class).to eq(AlimentosRenC)
+  			expect(@Papas.class.superclass).to eq(Alimento)
+  			expect(@Papas.instance_of? AlimentosRenC).to eq(true)
+  		end
+  	end
+  end
+  
   
   
 end
