@@ -238,6 +238,31 @@ RSpec.describe Nutrientes do
   	end
   end
   
+  describe Frutas do
+  	before :each do
+  		  @Manzana = Frutas.new("Manzana", 0.3, 12.4, 0.4)
+  		  @Platanos = Frutas.new("Platanos", 1.2, 21.4, 0.2)
+  		  @Pera = Frutas.new("Pera", 0.5 ,12.7, 0.3)
+  	end 
+  	context "Frutas"do
+  		it"Manzana"do
+  			expect(@Manzana.class).to eq(Frutas)
+  			expect(@Manzana.class.superclass).to eq(Alimento)
+  			expect(@Manzana.instance_of? Frutas).to eq(true)
+  		end
+  		it"Platanos"do
+  			expect(@Platanos.class).to eq(Frutas)
+  			expect(@Platanos.class.superclass).to eq(Alimento)
+  			expect(@Platanos.instance_of? Frutas).to eq(true)
+  		end
+  		it"Pera"do
+  			expect(@Pera.class).to eq(Frutas)
+  			expect(@Pera.class.superclass).to eq(Alimento)
+  			expect(@Pera.instance_of? Frutas).to eq(true)
+  		end
+  	end
+  end
+  
   
   
 end

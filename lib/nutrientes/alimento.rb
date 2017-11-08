@@ -77,3 +77,13 @@ class VeyHo < Alimento
 		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Verduras y Hortalizas"
 	end
 end
+
+class Frutas < Alimento
+	def initialize(nombre, p, g, l)
+		super(nombre, p, g, l)
+	end
+	
+	def to_s
+		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Frutas"
+	end
+end
