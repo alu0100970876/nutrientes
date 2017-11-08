@@ -84,6 +84,11 @@ RSpec.describe Nutrientes do
   		  @en.insertar_nodo_head(nuevo)
   		  expect(@en.extraer_cola).to eq(1)
   	  end
+  	  it "to_s funcional"do
+  	  	nuevo = 2
+  		  @en.insertar_nodo_cola(nuevo)
+  		  expect(@en.to_s).to eq("(1,2,)")
+  	  end
     end
   end
 end
