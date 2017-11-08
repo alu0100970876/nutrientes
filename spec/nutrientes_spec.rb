@@ -93,16 +93,19 @@ RSpec.describe Nutrientes do
   			expect(@huevo_f.class).to eq(HLH)
   			expect(@huevo_f.class.superclass).to eq(Alimento)
   			expect(@huevo_f.instance_of? HLH).to eq(true)
+  			expect(@huevo_f.is_a? HLH).to eq(true)
   		end
   		it"Leche vaca"do
   			expect(@leche.class).to eq(HLH)
   			expect(@leche.class.superclass).to eq(Alimento)
   			expect(@leche.instance_of? HLH).to eq(true)
+  			expect(@leche.is_a? HLH).to eq(true)
   		end
   		it"Yogurt"do
   			expect(@yogurt.class).to eq(HLH)
   			expect(@yogurt.class.superclass).to eq(Alimento)
   			expect(@yogurt.instance_of? HLH).to eq(true)
+  			expect(@yogurt.is_a? HLH).to eq(true)
   		end
   	end
   end
@@ -118,16 +121,19 @@ RSpec.describe Nutrientes do
   			expect(@Cerdo.class).to eq(CarnesyDerivados)
   			expect(@Cerdo.class.superclass).to eq(Alimento)
   			expect(@Cerdo.instance_of? CarnesyDerivados).to eq(true)
+  			expect(@Cerdo.is_a? CarnesyDerivados).to eq(true)
   		end
   		it"Ternera"do
   			expect(@Ternera.class).to eq(CarnesyDerivados)
   			expect(@Ternera.class.superclass).to eq(Alimento)
   			expect(@Ternera.instance_of? CarnesyDerivados).to eq(true)
+  			expect(@Ternera.is_a? CarnesyDerivados).to eq(true)
   		end
   		it"Pollo"do
   			expect(@Pollo.class).to eq(CarnesyDerivados)
   			expect(@Pollo.class.superclass).to eq(Alimento)
   			expect(@Pollo.instance_of? CarnesyDerivados).to eq(true)
+  			expect(@Pollo.is_a? CarnesyDerivados).to eq(true)
   		end
   	end
   end
@@ -143,16 +149,19 @@ RSpec.describe Nutrientes do
   			expect(@Bacalao.class).to eq(Pescadosymariscos)
   			expect(@Bacalao.class.superclass).to eq(Alimento)
   			expect(@Bacalao.instance_of? Pescadosymariscos).to eq(true)
+  			expect(@Bacalao.is_a? Pescadosymariscos).to eq(true)
   		end
   		it"Atun"do
   			expect(@Atun.class).to eq(Pescadosymariscos)
   			expect(@Atun.class.superclass).to eq(Alimento)
   			expect(@Atun.instance_of? Pescadosymariscos).to eq(true)
+  			expect(@Atun.is_a? Pescadosymariscos).to eq(true)
   		end
   		it"Salmon"do
   			expect(@Salmon.class).to eq(Pescadosymariscos)
   			expect(@Salmon.class.superclass).to eq(Alimento)
   			expect(@Salmon.instance_of? Pescadosymariscos).to eq(true)
+  			expect(@Salmon.is_a? Pescadosymariscos).to eq(true)
   		end
   	end
   end
@@ -168,16 +177,19 @@ RSpec.describe Nutrientes do
   			expect(@Aceite.class).to eq(AlimentosGrasos)
   			expect(@Aceite.class.superclass).to eq(Alimento)
   			expect(@Aceite.instance_of? AlimentosGrasos).to eq(true)
+  			expect(@Aceite.is_a? AlimentosGrasos).to eq(true)
   		end
   		it"Mantequilla"do
   			expect(@Mantequilla.class).to eq(AlimentosGrasos)
   			expect(@Mantequilla.class.superclass).to eq(Alimento)
   			expect(@Mantequilla.instance_of? AlimentosGrasos).to eq(true)
+  			expect(@Mantequilla.is_a? AlimentosGrasos).to eq(true)
   		end
   		it"Chocolate"do
   			expect(@Chocolate.class).to eq(AlimentosGrasos)
   			expect(@Chocolate.class.superclass).to eq(Alimento)
   			expect(@Chocolate.instance_of? AlimentosGrasos).to eq(true)
+  			expect(@Chocolate.is_a? AlimentosGrasos).to eq(true)
   		end
   	end
   end
@@ -194,21 +206,25 @@ RSpec.describe Nutrientes do
   			expect(@Azucar.class).to eq(AlimentosRenC)
   			expect(@Azucar.class.superclass).to eq(Alimento)
   			expect(@Azucar.instance_of? AlimentosRenC).to eq(true)
+  			expect(@Azucar.is_a? AlimentosRenC).to eq(true)
   		end
   		it"Arroz"do
   			expect(@Arroz.class).to eq(AlimentosRenC)
   			expect(@Arroz.class.superclass).to eq(Alimento)
   			expect(@Arroz.instance_of? AlimentosRenC).to eq(true)
+  			expect(@Arroz.is_a? AlimentosRenC).to eq(true)
   		end
   		it"Lentejas"do
   			expect(@Lentejas.class).to eq(AlimentosRenC)
   			expect(@Lentejas.class.superclass).to eq(Alimento)
   			expect(@Lentejas.instance_of? AlimentosRenC).to eq(true)
+  			expect(@Lentejas.is_a? AlimentosRenC).to eq(true)
   		end
   		it"Papas"do
   			expect(@Papas.class).to eq(AlimentosRenC)
   			expect(@Papas.class.superclass).to eq(Alimento)
   			expect(@Papas.instance_of? AlimentosRenC).to eq(true)
+  			expect(@Papas.is_a? AlimentosRenC).to eq(true)
   		end
   	end
   end
@@ -224,16 +240,19 @@ RSpec.describe Nutrientes do
   			expect(@Tomate.class).to eq(VeyHo)
   			expect(@Tomate.class.superclass).to eq(Alimento)
   			expect(@Tomate.instance_of? VeyHo).to eq(true)
+  			expect(@Tomate.is_a? VeyHo).to eq(true)
   		end
   		it"Cebolla"do
   			expect(@Cebolla.class).to eq(VeyHo)
   			expect(@Cebolla.class.superclass).to eq(Alimento)
   			expect(@Cebolla.instance_of? VeyHo).to eq(true)
+  			expect(@Cebolla.is_a? VeyHo).to eq(true)
   		end
   		it"Calabaza"do
   			expect(@Calabaza.class).to eq(VeyHo)
   			expect(@Calabaza.class.superclass).to eq(Alimento)
   			expect(@Calabaza.instance_of? VeyHo).to eq(true)
+  			expect(@Calabaza.is_a? VeyHo).to eq(true)
   		end
   	end
   end
@@ -249,16 +268,19 @@ RSpec.describe Nutrientes do
   			expect(@Manzana.class).to eq(Frutas)
   			expect(@Manzana.class.superclass).to eq(Alimento)
   			expect(@Manzana.instance_of? Frutas).to eq(true)
+  			expect(@Manzana.is_a? Frutas).to eq(true)
   		end
   		it"Platanos"do
   			expect(@Platanos.class).to eq(Frutas)
   			expect(@Platanos.class.superclass).to eq(Alimento)
   			expect(@Platanos.instance_of? Frutas).to eq(true)
+  			expect(@Platanos.is_a? Frutas).to eq(true)
   		end
   		it"Pera"do
   			expect(@Pera.class).to eq(Frutas)
   			expect(@Pera.class.superclass).to eq(Alimento)
   			expect(@Pera.instance_of? Frutas).to eq(true)
+  			expect(@Pera.is_a? Frutas).to eq(true)
   		end
   	end
   end
