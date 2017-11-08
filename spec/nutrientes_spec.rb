@@ -131,4 +131,32 @@ RSpec.describe Nutrientes do
   		end
   	end
   end
+  
+  describe Pescadosymariscos do
+  	before :each do
+  		  @Bacalao = Pescadosymariscos.new("Bacalao", 17.7, 0.0, 0.4)
+  		  @Atun = Pescadosymariscos.new("Atun", 21.5, 0.0, 15.5)
+  		  @Salmon = Pescadosymariscos.new("Salmon", 19.9, 0.0, 13.6)
+  	end 
+  	context "Pruebas para pescados y Mariscos"do
+  		it"Bacalao"do
+  			expect(@Bacalao.class).to eq(Pescadosymariscos)
+  			expect(@Bacalao.class.superclass).to eq(Alimento)
+  			expect(@Bacalao.instance_of? Pescadosymariscos).to eq(true)
+  		end
+  		it"Atun"do
+  			expect(@Atun.class).to eq(Pescadosymariscos)
+  			expect(@Atun.class.superclass).to eq(Alimento)
+  			expect(@Atun.instance_of? Pescadosymariscos).to eq(true)
+  		end
+  		it"Salmon"do
+  			expect(@Salmon.class).to eq(Pescadosymariscos)
+  			expect(@Salmon.class.superclass).to eq(Alimento)
+  			expect(@Salmon.instance_of? Pescadosymariscos).to eq(true)
+  		end
+  	end
+  end
+  
+  
+  
 end

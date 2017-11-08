@@ -37,3 +37,13 @@ class CarnesyDerivados < Alimento
 		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Carnes y derivados"
 	end
 end
+
+class Pescadosymariscos < Alimento
+	def initialize(nombre, p, g, l)
+		super(nombre, p, g, l)
+	end
+	
+	def to_s
+		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: pescados y mariscos"
+	end
+end
