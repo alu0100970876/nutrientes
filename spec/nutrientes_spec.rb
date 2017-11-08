@@ -47,10 +47,13 @@ RSpec.describe Nutrientes do
   describe Lista_alim do
   	
   	before :each do
-    		@ejemplo = Lista_alim.new()
+  			@alim = Alimento.new("Ejemplo", 10, 5, 1)
+    		@ejemplo = Lista_alim.new(@alim)
   	end 
-  	describe "#Existencia de un nodo" do
-  		expect(@ejemplo.Node).to exist
-  	end
+  	describe "#Métodos de la lista" do
+  		it"Insertar nodo" do
+  		  
+  	  end
+    end
   end
 end
