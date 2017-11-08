@@ -213,6 +213,31 @@ RSpec.describe Nutrientes do
   	end
   end
   
+  describe VeyHo do
+  	before :each do
+  		  @Tomate = VeyHo.new("Tomate", 1.0, 3.5, 0.2)
+  		  @Cebolla = VeyHo.new("Cebolla", 1.3, 5.8, 0.3)
+  		  @Calabaza = VeyHo.new("Calabaza", 1.1, 4.8, 0.1)
+  	end 
+  	context "Pruebas para Verduras y Hortalizas"do
+  		it"Tomate"do
+  			expect(@Tomate.class).to eq(VeyHo)
+  			expect(@Tomate.class.superclass).to eq(Alimento)
+  			expect(@Tomate.instance_of? VeyHo).to eq(true)
+  		end
+  		it"Cebolla"do
+  			expect(@Cebolla.class).to eq(VeyHo)
+  			expect(@Cebolla.class.superclass).to eq(Alimento)
+  			expect(@Cebolla.instance_of? VeyHo).to eq(true)
+  		end
+  		it"Calabaza"do
+  			expect(@Calabaza.class).to eq(VeyHo)
+  			expect(@Calabaza.class.superclass).to eq(Alimento)
+  			expect(@Calabaza.instance_of? VeyHo).to eq(true)
+  		end
+  	end
+  end
+  
   
   
 end
