@@ -33,6 +33,20 @@ RSpec.describe Nutrientes do
 				expect(@ejemplo.v_energetico).to eq(69)
 			end
 		end
+		describe "#Comparable" do
+		    it "Menor" do
+		        @ejemplo2 = Alimento.new("Ejemplo", 1, 1, 1)
+		        expect(@ejemplo < @ejemplo2).to eq(false)
+		    end
+		    it "Mayor" do
+		        @ejemplo2 = Alimento.new("Ejemplo", 1, 1, 1)
+		        expect(@ejemplo > @ejemplo2).to eq(true)
+		    end
+		    it "Igual" do
+		        @ejemplo2 = Alimento.new("Ejemplo", 1, 1, 1)
+		        expect(@ejemplo == @ejemplo2).to eq(false)
+		    end
+		end
   end
   
   describe Lista do
@@ -284,7 +298,4 @@ RSpec.describe Nutrientes do
   		end
   	end
   end
-  
-  
-  
 end

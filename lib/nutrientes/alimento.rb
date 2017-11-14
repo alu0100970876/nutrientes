@@ -1,5 +1,6 @@
 class Alimento
 	
+	include Comparable
 	attr_reader :nombre, :proteinas, :glucidos, :lipidos
 
 	def initialize(nombre, p, g, l)
@@ -15,6 +16,10 @@ class Alimento
 
 	def v_energetico()
 		return (@proteinas * 4 + @glucidos * 4 + @lipidos * 9)
+	end
+	
+	def <=>(anOther)
+		return self.v_energetico <=> anOther.v_energetico
 	end
 end
 
