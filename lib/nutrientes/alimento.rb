@@ -1,6 +1,10 @@
+# @author Miguel Jiménez Gomis 
+# Esta clase representa a un alimento 
 class Alimento
 	
 	include Comparable
+	
+	#Permite la lectura de estas variables
 	attr_reader :nombre, :proteinas, :glucidos, :lipidos
 
 	def initialize(nombre, p, g, l)
@@ -9,15 +13,22 @@ class Alimento
 		@glucidos = g
 		@lipidos = l
 	end
-
+	
+	# Converts the object into a string
 	def to_s()
 		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr"
 	end
-
+	
+	# Este metodo calcula el valor energetico de un alimento
+	# @return [Integer] El calculo del valor energetico.
 	def v_energetico()
 		return (@proteinas * 4 + @glucidos * 4 + @lipidos * 9)
 	end
 	
+	# Operador <=> para el modulo Comparable
+	#
+	# @param anOther [Alimento] Otro objeto de tipo alimento
+	# @return [bool] -1 menor, 0 igual, 1 mayor.
 	def <=>(anOther)
 		return self.v_energetico <=> anOther.v_energetico
 	end
@@ -28,6 +39,7 @@ class HLH < Alimento
 		super(nombre, p, g, l)
 	end
 	
+	# Converts the object into a string
 	def to_s
 		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Huevos, lácteos y helados"
 	end
@@ -38,6 +50,7 @@ class CarnesyDerivados < Alimento
 		super(nombre, p, g, l)
 	end
 	
+	# Converts the object into a string
 	def to_s
 		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Carnes y derivados"
 	end
@@ -48,6 +61,7 @@ class Pescadosymariscos < Alimento
 		super(nombre, p, g, l)
 	end
 	
+	# Converts the object into a string
 	def to_s
 		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: pescados y mariscos"
 	end
@@ -58,6 +72,7 @@ class AlimentosGrasos < Alimento
 		super(nombre, p, g, l)
 	end
 	
+	# Converts the object into a string
 	def to_s
 		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Alimentos Grasos"
 	end
@@ -68,6 +83,7 @@ class AlimentosRenC < Alimento
 		super(nombre, p, g, l)
 	end
 	
+	# Converts the object into a string
 	def to_s
 		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Alimentos ricos en carbohidratos"
 	end
@@ -78,6 +94,7 @@ class VeyHo < Alimento
 		super(nombre, p, g, l)
 	end
 	
+	# Converts the object into a string
 	def to_s
 		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Verduras y Hortalizas"
 	end
@@ -88,6 +105,7 @@ class Frutas < Alimento
 		super(nombre, p, g, l)
 	end
 	
+	# Converts the object into a string
 	def to_s
 		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Frutas"
 	end
