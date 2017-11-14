@@ -94,6 +94,19 @@ RSpec.describe Nutrientes do
   		  expect(@en.to_s).to eq("(1,2,)")
   	  end
     end
+    context "Enumerable" do
+        it "Sumar todos los elementos de la lista" do
+            nuevo= 2
+            @en.insertar_nodo_cola(nuevo)
+            nuevo = 3
+            @en.insertar_nodo_cola(nuevo)
+            nuevo = 4
+            @en.insertar_nodo_cola(nuevo)
+            val = 0
+            @en.each { |i| val += i.value }
+            expect(val).to eq(10)
+        end
+    end
   end
   
   describe HLH do

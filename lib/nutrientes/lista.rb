@@ -2,6 +2,8 @@
 Node = Struct.new(:value, :next_, :prev)
 
 class Lista
+    include Enumerable
+    
     attr_reader :head, :tail
     
     def initialize(val)
@@ -44,6 +46,14 @@ class Lista
        end
        string += ")"
        return string
+    end
+    
+    def each
+       actual = @head
+       while actual != nil do
+           yield actual
+           actual = actual.next_
+       end
     end
     
 end
