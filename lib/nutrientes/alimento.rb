@@ -49,7 +49,8 @@ class Alimento
 		#suma = 0
 		#igind.each{ |x| suma += x}
 		#@indexglucosa = (suma / igind.length)
-		@indexglucosa = igind.reduce('+') / igind.length
+		@indexglucosa = igind.sum / igind.length
+		#@indexglucosa = igind.reduce('+') / igind.length version 2.3.0 de ruby
 	end
 	
 	# Converts the object into a string
