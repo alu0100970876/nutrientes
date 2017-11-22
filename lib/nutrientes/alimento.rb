@@ -5,13 +5,47 @@ class Alimento
 	include Comparable
 	
 	#Permite la lectura de estas variables
-	attr_reader :nombre, :proteinas, :glucidos, :lipidos
+	attr_reader :nombre, :proteinas, :glucidos, :lipidos, :indexglucosa
 
 	def initialize(nombre, p, g, l)
 		@nombre = nombre
 		@proteinas = p
 		@glucidos = g
 		@lipidos = l
+		@indexglucosa = nil
+	end
+	
+	#Calcula el indice glucemico de un alimento
+	#
+	# @param data [Array] Vector con los datos glucemicos de los alimentos
+	# @param glucosa [Array] Vector con los datos de la glucosa
+	def calculate_index(data, glucosa)
+		aibc = []
+		aibc_gluc = []
+		data.each do |x|
+			t = 0
+			x.each_index do |a| 
+				if (a  != 0) 
+					t += (((x[a] - x[0]) + (x[a - 1] - x[0])) /2)*5  
+				end 
+			end 
+			aibc << t
+		end
+		glucosa.each do |x|
+			t = 0
+			x.each_index do |a| 
+				if (a  != 0) 
+					t += (((x[a] - x[0]) + (x[a - 1] - x[0])) /2)*5
+				end 
+			end 
+			aibc_gluc << t
+		end
+		igind = []
+		aibc.each_index { |x|  igind << ((aibc[x] / aibc_gluc[x]) * 100)}
+		
+		suma = 0
+		igind.each{ |x| suma += x}
+		@indexglucosa = (suma / igind.length)
 	end
 	
 	# Converts the object into a string

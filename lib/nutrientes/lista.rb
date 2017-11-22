@@ -67,7 +67,7 @@ class Lista
     def each
        actual = @head
        while actual != nil do
-           yield actual
+           yield actual.value
            actual = actual.next_
        end
     end
