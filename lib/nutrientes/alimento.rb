@@ -18,7 +18,7 @@ class Alimento
 	#Calcula el indice glucemico de un alimento
 	#
 	# @param data [Array] Vector con los datos glucemicos de los alimentos
-	# @param glucosa [Array] Vector con los datos de la glucosa
+	# @param glucosa [Array] Vector con los datos de la gluco
 	def calculate_index(data, glucosa)
 		aibc = []
 		aibc_gluc = []
@@ -40,10 +40,15 @@ class Alimento
 			end 
 			aibc_gluc << t
 		end
+		
+		#aibc.each{|x| x = x/48}
+		#aibc_gluc.each{|x| x = x/48}
 		igind = []
 		aibc.each_index { |x|  igind << ((aibc[x] / aibc_gluc[x]) * 100)}
-
-		@indexglucosa = igind.sum / igind.length 
+		
+		suma = 0
+		igind.each{ |x| suma += x}
+		@indexglucosa = (suma / igind.length)
 	end
 	
 	# Converts the object into a string
