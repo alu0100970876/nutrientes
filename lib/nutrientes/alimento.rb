@@ -42,10 +42,8 @@ class Alimento
 		end
 		igind = []
 		aibc.each_index { |x|  igind << ((aibc[x] / aibc_gluc[x]) * 100)}
-		
-		suma = 0
-		igind.each{ |x| suma += x}
-		@indexglucosa = (suma / igind.length)
+
+		@indexglucosa = igind.sum / igind.length 
 	end
 	
 	# Converts the object into a string
