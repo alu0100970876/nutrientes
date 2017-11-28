@@ -15,4 +15,6 @@ $rake <-- make the test
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).+
+
+[![Coverage Status](https://coveralls.io/repos/github/alu0100970876/nutrientes/badge.svg?branch=practica7)](https://coveralls.io/github/alu0100970876/nutrientes?branch=practica7)
