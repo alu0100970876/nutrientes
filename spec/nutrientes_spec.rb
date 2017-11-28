@@ -1,4 +1,5 @@
 require "spec_helper"
+require 'benchmark'
 
 RSpec.describe Nutrientes do
   it "has a version number" do
@@ -25,7 +26,7 @@ RSpec.describe Nutrientes do
   	end
 		describe "#Metodos para obtener info formateada" do
 			it "Metodo para obtener un alimento formateado" do
-				expect(@ejemplo.to_s).to eq("Nombre: Ejemplo, Proteinas: 10gr, Glúcidos: 5gr, Lipidos: 1gr")
+				expect(@ejemplo.to_s).to eq("Nombre: Ejemplo, Proteinas: 10gr, Glúcidos: 5gr, Lipidos: 1gr, Valor energetico = 69")
 			end
 		end
 		describe "#Metodos para obtener el valor energético de un alimento" do
@@ -342,5 +343,66 @@ RSpec.describe Nutrientes do
   			expect(@Pera.is_a? Frutas).to eq(true)
   		end
   	end
+  end
+  context "Benchmarck ordenaciones"do
+    before :each do
+      def bs_for (array)
+        for i in 0..array.size 
+          for j in i+1..array.size-1    
+            array[i], array[j] = array[j], array[i] if(array[i] > array[j])
+          end
+        end
+        puts array
+        array
+      end
+        
+      def bs_each (array) #con el each
+        array.each do
+          swap_count = 0
+          array.each_with_index do |a, index|
+            break if index == (array.length - 1)
+            if a > array[index+1]
+              array[index],array[index+1] = array[index +1], array[index]
+              swap_count += 1
+            end
+          end
+          break if swap_count == 0 # this means it's ordered
+        end
+        puts array
+        array
+      end
+      
+      @list = [HLH.new("Huevo frito", 14.1, 0.0, 19.5),
+      HLH.new("Leche vaca", 3.3, 4.8, 3.2),
+      HLH.new("Yogurt", 3.8, 4.9, 3.8),
+      CarnesyDerivados.new("Cerdo", 21.5, 0.0, 6.3),
+      CarnesyDerivados.new("Ternera", 21.1, 0.0, 3.1),
+      CarnesyDerivados.new("Pollo", 20.6, 0.0, 5.6),
+      Pescadosymariscos.new("Bacalao", 17.7, 0.0, 0.4),
+      Pescadosymariscos.new("Atun", 21.5, 0.0, 15.5),
+      Pescadosymariscos.new("Salmon", 19.9, 0.0, 13.6),
+      AlimentosGrasos.new("Aceite de oliva", 0.0, 0.2, 99.6),
+      AlimentosGrasos.new("Mantequilla", 0.7, 0.0, 83.2),
+      AlimentosGrasos.new("Chocolate", 5.3, 47.0, 30.0),
+      AlimentosRenC.new("Azucar", 0.0, 99.8, 0.0),
+      AlimentosRenC.new("Arroz", 6.8, 77.7, 0.6),
+      AlimentosRenC.new("Lentejas", 23.5, 52.0, 1.4),
+      AlimentosRenC.new("Papas", 2.0, 15.4, 0.1),
+      VeyHo.new("Tomate", 1.0, 3.5, 0.2),
+      VeyHo.new("Cebolla", 1.3, 5.8, 0.3),
+      VeyHo.new("Calabaza", 1.1, 4.8, 0.1),
+      Frutas.new("Manzana", 0.3, 12.4, 0.4),
+      Frutas.new("Platanos", 1.2, 21.4, 0.2),
+      Frutas.new("Pera", 0.5 ,12.7, 0.3)]
+    end
+    it "Comprobación benchmark"do
+      Benchmark.bmbm do |x| #funcionamiento de benchmark
+         puts @list
+         x.report("Con el metodo sort\n")  { @list.dup.sort }
+         puts @list.dup.sort
+         x.report("Con el metodo for\n") { bs_for(@list.dup)}
+         x.report("Con el metodo each\n") { bs_each(@list.dup)}
+      end
+    end
   end
 end

@@ -55,7 +55,7 @@ class Alimento
 	
 	# Converts the object into a string
 	def to_s()
-		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr"
+		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr, Valor energetico = #{v_energetico()}"
 	end
 	
 	# Este metodo calcula el valor energetico de un alimento
@@ -80,7 +80,7 @@ class HLH < Alimento
 	
 	# Converts the object into a string
 	def to_s
-		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Huevos, lácteos y helados"
+		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Huevos, lácteos y helados, Valor energetico = #{v_energetico()}"
 	end
 end
 
@@ -91,7 +91,7 @@ class CarnesyDerivados < Alimento
 	
 	# Converts the object into a string
 	def to_s
-		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Carnes y derivados"
+		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Carnes y derivados, Valor energetico = #{v_energetico()}"
 	end
 end
 
@@ -102,7 +102,7 @@ class Pescadosymariscos < Alimento
 	
 	# Converts the object into a string
 	def to_s
-		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: pescados y mariscos"
+		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: pescados y mariscos, Valor energetico = #{v_energetico()}"
 	end
 end
 
@@ -113,7 +113,7 @@ class AlimentosGrasos < Alimento
 	
 	# Converts the object into a string
 	def to_s
-		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Alimentos Grasos"
+		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Alimentos Grasos, Valor energetico = #{v_energetico()}"
 	end
 end
 
@@ -124,7 +124,7 @@ class AlimentosRenC < Alimento
 	
 	# Converts the object into a string
 	def to_s
-		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Alimentos ricos en carbohidratos"
+		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Alimentos ricos en carbohidratos, Valor energetico = #{v_energetico()}"
 	end
 end
 
@@ -135,7 +135,7 @@ class VeyHo < Alimento
 	
 	# Converts the object into a string
 	def to_s
-		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Verduras y Hortalizas"
+		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Verduras y Hortalizas,Valor energetico = #{v_energetico()}"
 	end
 end
 
@@ -146,6 +146,6 @@ class Frutas < Alimento
 	
 	# Converts the object into a string
 	def to_s
-		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Frutas"
+		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Frutas,Valor energetico = #{v_energetico()}"
 	end
 end
