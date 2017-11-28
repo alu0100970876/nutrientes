@@ -352,7 +352,7 @@ RSpec.describe Nutrientes do
             array[i], array[j] = array[j], array[i] if(array[i] > array[j])
           end
         end
-        puts array
+        #puts array
         array
       end
         
@@ -368,7 +368,7 @@ RSpec.describe Nutrientes do
           end
           break if swap_count == 0 # this means it's ordered
         end
-        puts array
+        #puts array
         array
       end
       
@@ -397,9 +397,9 @@ RSpec.describe Nutrientes do
     end
     it "Comprobación benchmark"do
       Benchmark.bmbm do |x| #funcionamiento de benchmark
-         puts @list
+         #puts @list
          x.report("Con el metodo sort\n")  { @list.dup.sort }
-         puts @list.dup.sort
+         #puts @list.dup.sort
          x.report("Con el metodo for\n") { bs_for(@list.dup)}
          x.report("Con el metodo each\n") { bs_each(@list.dup)}
       end
