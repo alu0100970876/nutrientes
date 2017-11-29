@@ -1,7 +1,8 @@
-require "bundler/setup"
-require "nutrientes"
 require "coveralls"
 Coveralls.wear!
+require "bundler/setup"
+require "nutrientes"
+
 
 
 RSpec.configure do |config|
