@@ -346,7 +346,7 @@ RSpec.describe Nutrientes do
   end
   context "Benchmarck ordenaciones"do
     before :each do
-      def bs_for (array)
+      def bs_for (array)!
         for i in 0..array.size 
           for j in i+1..array.size-1    
             array[i], array[j] = array[j], array[i] if(array[i] > array[j])
@@ -356,7 +356,7 @@ RSpec.describe Nutrientes do
         array
       end
         
-      def bs_each (array) #con el each
+      def bs_each (array)! #con el each
         array.each do
           swap_count = 0
           array.each_with_index do |a, index|
