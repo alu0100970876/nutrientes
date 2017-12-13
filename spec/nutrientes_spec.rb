@@ -398,11 +398,25 @@ RSpec.describe Nutrientes do
     it "Comprobación benchmark"do
       Benchmark.bmbm do |x| #funcionamiento de benchmark
          #puts @list
-         x.report("Con el metodo sort\n")  { @list.dup.sort }
+         x.report("Con el metodo sort")  { @list.dup.sort }
          #puts @list.dup.sort
-         x.report("Con el metodo for\n") { bs_for!(@list.dup)}
-         x.report("Con el metodo each\n") { bs_each!(@list.dup)}
+         x.report("Con el metodo for") { bs_for!(@list.dup)}
+         x.report("Con el metodo each") { bs_each!(@list.dup)}
       end
+    end
+  end
+  
+  describe Plato do
+    it "Plato de ejemplo" do
+      @lentejas_arroz = Plato.new("Lentejas con arroz, salsa de tomate, huevo y platano a la plancha") do
+        vegetal "Tomate","2 pieza_pequeña"
+        fruta "Platanos","20 gramos"
+        cereal "Arroz","1 taza"
+        proteinas "Lentejas","1  cucharón"
+        proteinas "Huevo frito", "1 pieza"
+        aceite "Aceite de oliva","1 cucharada"
+      end
+      puts @lentejas_arroz.to_s
     end
   end
 end

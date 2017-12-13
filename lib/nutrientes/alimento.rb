@@ -149,3 +149,4 @@ class Frutas < Alimento
 		return "Nombre: #{@nombre}, Proteinas: #{@proteinas}gr, Glúcidos: #{@glucidos}gr, Lipidos: #{@lipidos}gr Grupo: Frutas,Valor energetico = #{v_energetico()}"
 	end
 end
+
