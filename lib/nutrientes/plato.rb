@@ -21,10 +21,10 @@ class Plato
       Frutas.new("Manzana", 0.3, 12.4, 0.4),
       Frutas.new("Platanos", 1.2, 21.4, 0.2),
       Frutas.new("Pera", 0.5 ,12.7, 0.3)]
-  @@cantidades = { "pieza_pequeña" => 10,
-                  "pieza" => 20,
-                  "taza" => 30,
-                  "cucharón" => 25,
+  @@cantidades = { "pieza_pequeña" => 5,
+                  "pieza" => 10,
+                  "taza" => 15,
+                  "cucharón" => 20,
                   "cucharada" => 3,
                   "gramo" => 1,
                   "gramos" => 1
