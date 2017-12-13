@@ -415,6 +415,7 @@ RSpec.describe Nutrientes do
         proteinas "Lentejas","1  cucharón"
         proteinas "Huevo frito", "1 pieza"
         aceite "Aceite de oliva","1 cucharada"
+        vegetal "prueba","2 pieza_pequeña"
       end
       puts @lentejas_arroz.to_s
     end
